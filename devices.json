@@ -1,0 +1,72 @@
+[
+    {
+        "name": "SPARC",
+        "type": "Tokamak",
+        "scenarioName": "default",
+        "major_radius": {"value": 1.85,"citation": "creely_overview_2020"},
+        "minor_radius": {"value": 0.57,"citation": "creely_overview_2020"},
+        "inverse_aspect_ratio": {"value": 0.31,"citation": "creely_overview_2020"},
+        "plasma_current": {"value": 8.7e6,"citation": "creely_overview_2020"},
+        "toroidal_field": {"value": 12.2,"citation": "creely_overview_2020"},
+        "elongation_separatron": {"value": 1.97,"citation": "creely_overview_2020"},
+        "triangularity_separatron": {"value": 0.54,"citation": "creely_overview_2020"},
+        "q_95": {"value": 3.4,"citation": "creely_overview_2020"},
+
+        "scenarios": [
+            {
+                "name":"SPARC",
+                "scenarioName": "Full Field H-Mode",
+                "confinement": {"value": "H","citation": "creely_overview_2020"},
+                "plasma_current": {"value": 8.7e6,"citation": "creely_overview_2020"},
+                "toroidal_field": {"value": 12.2,"citation": "creely_overview_2020"},
+                "power_neutral_beam_injection": {"value": null,"citation": "creely_overview_2020"},
+                "power_electron_cyclotron_heating": {"value": null,"citation": "creely_overview_2020"},
+                "power_ion_cyclotron_heating": {"value": 25e6,"citation": "creely_overview_2020"},
+                "power_ohmic": {"value":1.5e6,"citation": "creely_overview_2020"},
+                "torque": {"value": null},
+                "fusion_gain": {"value": null},
+                "beta_normalized": {"value": 1,"citation": "creely_overview_2020"},
+                "internal_inductance_max": {"value": null},
+                "internal_inductance_min": {"value": null},
+                "electron_density": {"value":3.1e20,"citation": "creely_overview_2020"},
+                "te_ti_ratio": {"value": 1,"citation": "creely_overview_2020"},
+                "greenwald_fraction": {"value": 0.37,"citation": "creely_overview_2020"}
+            }
+        ]
+    },
+    {
+        "name": "DIII-D",
+        "type": "Tokamak",
+        "scenarioName": "default",
+        "major_radius": {"value": 1.7,"citation": "buttery_diii-d_2019"},
+        "minor_radius": {"value": 0.6,"citation": "buttery_diii-d_2019"},
+        "inverse_aspect_ratio": {"value": 0.35,"citation": "buttery_diii-d_2019"},
+        "plasma_current": {"value": {"low":0.4e6, "high":2e6},"citation": "buttery_diii-d_2019"},
+        "toroidal_field": {"value": {"low":0.6, "high":2.17},"citation": "buttery_diii-d_2019"},
+        "elongation_separatron": {"value": null},
+        "triangularity_separatron": {"value": null},
+        "q_95": {"value": {"low":2, "high":12},"citation": "buttery_diii-d_2019"},
+
+        "scenarios": [
+            {
+                "name": "DIII-D",
+                "scenarioName": "ITER Baseline",
+                "confinement": {"value": "H","citation": "turco_ibs_2018"},
+                "plasma_current": {"value": {"low":1.23e6, "high":1.58e6}, "citation": "turco_ibs_2018"},
+                "toroidal_field": {"value": {"low":1.58, "high":2.03},"citation": "turco_ibs_2018"},
+                "power_neutral_beam_injection": {"value": {"low":2e6, "high":5.5e6},"citation": "turco_ibs_2018"},
+                "power_electron_cyclotron_heating": {"value": {"low":0e6, "high":3.3e6},"citation": "turco_ibs_2018"},
+                "power_ion_cyclotron_heating": {"value": null,"citation": "buttery_diii-d_2019"},
+                "power_ohmic": {"value":null},
+                "torque": {"value": {"low":-0.2, "high":4.2},"citation": "turco_ibs_2018"},
+                "fusion_gain": {"value": {"low":0.3, "high":0.48},"citation": "turco_ibs_2018"},
+                "beta_normalized": {"value": {"low":1.75, "high":2.25},"citation": "turco_ibs_2018"},
+                "internal_inductance_max": {"value": {"low":0.95, "high":1.25},"citation": "turco_ibs_2018"},
+                "internal_inductance_min": {"value": {"low":0.8, "high":0.99},"citation": "turco_ibs_2018"},
+                "electron_density": {"value": {"low":4.65e19, "high":8.2e19},"citation": "turco_ibs_2018"},
+                "te_ti_ratio": {"value": {"low":0.74, "high":0.93},"citation": "turco_ibs_2018"},
+                "greenwald_fraction": {"value": {"low":0.35, "high":0.63},"citation": "turco_ibs_2018"}
+            }
+        ]
+    }
+]

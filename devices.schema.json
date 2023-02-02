@@ -1,0 +1,77 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "placeholder",
+    "title": "Plasma Devices",
+    "description": "an array of plasma devices for plasmachef.io",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "description": "a single plasma device",
+        "scenario_name": {"type": "string"},
+        "requried": ["name","type","scenario_name"],
+        "properties": {
+            "name": {
+                "type": "string",
+                "description": "name of device, case-sensitive"
+            },
+            "type": {
+                "type": "string",
+                "description": "type of device, not case-sensitive"
+            },
+            "major_radius": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "anyOf": [
+                            {"type": "number"},
+                            {"type": "null"},
+                            {
+                                "type": "object",
+                                "description": "numerical range, low should be less than high",
+                                "properties": {
+                                    "low": {"type": "number"},
+                                    "high": {"type": "number"}
+                                },
+                                "additionalProperties": false
+                            }
+                        ]
+                    },
+                    "citation": {"type": "string"}
+                },
+                "additionalProperties": false
+            },
+            "confinement": {
+                "type": "object",
+                "properties": {
+                    "value": {"type": "string"},
+                    "citation": {"type": "string"}
+                },
+                "additionalProperties": false
+            },
+            "minor_radius": {"$ref": "#/items/properties/major_radius"},
+            "inverse_aspect_ratio" :{"$ref": "#/items/properties/major_radius"},
+            "plasma_current" :{"$ref": "#/items/properties/major_radius"},
+            "toroidal_field" :{"$ref": "#/items/properties/major_radius"},
+            "elongation_separatron" :{"$ref": "#/items/properties/major_radius"},
+            "triangularity_separatron" :{"$ref": "#/items/properties/major_radius"},
+            "q_95" :{"$ref": "#/items/properties/major_radius"},
+            "power_neutral_beam_injection" :{"$ref": "#/items/properties/major_radius"},
+            "power_electron_cyclotron_heating" :{"$ref": "#/items/properties/major_radius"},
+            "power_ion_cyclotron_heating" :{"$ref": "#/items/properties/major_radius"},
+            "power_ohmic" :{"$ref": "#/items/properties/major_radius"},
+            "torque" :{"$ref": "#/items/properties/major_radius"},
+            "fusion_gain" :{"$ref": "#/items/properties/major_radius"},
+            "beta_normalized" :{"$ref": "#/items/properties/major_radius"},
+            "internal_inductance_max" :{"$ref": "#/items/properties/major_radius"},
+            "internal_inductance_min" :{"$ref": "#/items/properties/major_radius"},
+            "electron_density" :{"$ref": "#/items/properties/major_radius"},
+            "te_ti_ratio" :{"$ref": "#/items/properties/major_radius"},
+
+
+            "scenarios": {
+                "$ref": "#",
+                "description": "since a scenario may alter any default value we simply allow it to be anything up to a complete device"
+            }
+        }
+    }
+}
